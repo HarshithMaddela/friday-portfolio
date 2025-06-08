@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harshith | FRIDAY Mode</title>
+  <link rel="stylesheet" href="./styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="jarvis-ui">
+    <header>
+      <h1 class="logo" href="./index.html">FRIDAY<span>OS</span></h1>
+      <nav>
+        <a href="./about.html">About</a>
+        <a href="./skills.html">Skills</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h2>Welcome, <span class="to">To</span> <span class="my">My</span> <span class="page">Page</span></h2>
+      <p class="typewriter">FRIDAY online. Awaiting your command...</p>
+      <button id="activate-friday" class="btn-glow">Activate FRIDAY</button>
+      <audio id="friday-audio" src="./ttsMP3.com_VoiceText_2025-6-8_12-26-45.mp3"></audio>
+    </section>
+
+    <section id="about" class="panel">
+      <h2>System Overview</h2>
+      <p>Hii..This is Harshith."Diving deep into development with a passion for crafting futuristic UIs."</p><br/>
+      <p> This interface is a glimpse into my learning journey — evolving with every line of code.</p><br />
+      <p> Initializing Stark Protocols...</p>
+    </section>
+
+    <section id="skills" class="panel">
+      <h2>Core Modules</h2>
+      <div class="skills-container">
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">React</div>
+        <div class="card">JavaScript</div>
+        <div class="card">Node.js</div>
+      </div>
+    </section>
+
+    <section id="contact" class="panel">
+      <h2>Contact Command</h2>
+      <p>Let’s connect and deploy something awesome.</p>
+      <a class="btn-glow" href="./contact.html">INITIATE CONTACT</a>
+    </section>
+
+    <footer>
+      <p>© 2025 Harshith | FRIDAY AI Interface</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("activate-friday").addEventListener("click", function () {
+      const audio = document.getElementById("friday-audio");
+      audio.play().catch(err => {
+        console.warn("Audio play failed:", err);
+      });
+
+      this.disabled = true;
+      this.innerText = "FRIDAY Online";
+      this.classList.add("activated");
+    });
+  </script>
+</body>
+</html>
